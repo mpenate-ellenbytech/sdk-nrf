@@ -11,8 +11,10 @@
 # function to avoid polluting the top-level scope.
 
 function(ncs_secure_boot_mcuboot_sign application bin_files signed_targets prefix)
-  set(keyfile "${SB_CONFIG_BOOT_SIGNATURE_KEY_FILE}")
+  # set(keyfile "${SB_CONFIG_BOOT_SIGNATURE_KEY_FILE}")
 
+  sysbuild_get(keyfile IMAGE mcuboot VAR CONFIG_BOOT_SIGNATURE_KEY_FILE KCONFIG)
+  
   # Find imgtool. Even though west is installed, imgtool might not be.
   # The user may also have a custom manifest which doesn't include
   # MCUboot.
