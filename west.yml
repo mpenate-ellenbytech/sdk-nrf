@@ -144,8 +144,9 @@ manifest:
       revision: v3.6.2-ncs1
     - name: oberon-psa-crypto
       path: modules/crypto/oberon-psa-crypto
+      remote: eti-mp-forks
       repo-path: sdk-oberon-psa-crypto
-      revision: b41e899e7302462eb952b0b6a7c6903e368fb395
+      revision: 195d89de43876b09afa7952f04f57cca1809668a
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
